@@ -1,9 +1,34 @@
+
+h1 {
+    margin: 0;
+}
+h2, h3 {
+    color: #592c23;
+    font-weight: normal;
+    text-align: center;
+}
+h2 {
+    font-size: 1.7rem;
+}
+h3 {
+    font-size: 1.4rem;
+}
+body {
+    margin: 0;
+}
+header {
+    border: 1px #000 solid;
+}
 .container {
     margin: auto;
-    max-width: 500px;
+    max-width: 1024px;
     font-family: sans-serif;
 }
-
+.site-title {
+    font-size: 3rem;
+    color: gray;
+    font-weight: 700;
+}
 .heading {
   color: rebeccapurple;
 }

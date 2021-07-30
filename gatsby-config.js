@@ -1,16 +1,38 @@
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
-    title: "Chess Box",
+    title: "Tango Chess",
   },
   plugins: [
     "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
-    "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    {
+        resolve: 'gatsby-plugin-mdx',
+          options: {
+            root: __dirname,
+            gatsbyRemarkPlugins: [
+              {
+                resolve: 'gatsby-remark-images',
+                options: {
+                  maxWidth: 500,
+                  linkImagesToOriginal: false,
+                },
+              },
+            ],
+          },
+        plugin: [
+            {
+                resolve: "gatsby-remark-images",
+                options: {
+                    maxWidth: 500,
+                },
+            },
+        ],
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -27,5 +49,21 @@ module.exports = {
       },
       __key: "pages",
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "blogs",
+        path: "./blog/",
+      },
+      __key: "blogs",
+    }, 
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "juegos",
+        path: "./juegos/",
+      },
+      __key: "juegos",
+    },       
   ],
 };

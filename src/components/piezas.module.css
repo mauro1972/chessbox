@@ -1,0 +1,8 @@
+.piezas-grid {
+    display: flex;
+    flex-direction: column;
+}
+
+.piezas-grid article {
+    text-align: center;
+}
